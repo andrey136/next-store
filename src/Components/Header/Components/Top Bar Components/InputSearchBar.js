@@ -12,7 +12,6 @@ class InputSearchBar extends React.Component {
   }
 
   changeInput(val){
-    console.log(val);
     this.setState({inputText: val})
   }
 
