@@ -1,10 +1,8 @@
 import React from "react";
 import InputSearchBar from "./InputSearchBar";
-
+import QuickLinks from "./QuickLinks";
 
 class HeaderTopBar extends React.Component {
-
-  quick_links = ['My Account', 'Quick', 'Shop', 'Help', '8 800 2009824'];
 
   render() {
 
@@ -13,11 +11,7 @@ class HeaderTopBar extends React.Component {
         <a href="" className="HeaderLogo">next</a>
         <div className="header-top-bar-container">
           <InputSearchBar/>
-          <div className="QuickLinks">
-            <ul>
-              {this.quick_links.map((el,ind) => ind == this.quick_links.length ? <li><a href="">{el}</a></li> : <li id="top-header-phone-number"><a href="">{el}</a></li>)}
-            </ul>
-          </div>
+          <QuickLinks/>
           <div className="BagSummary MiniBagNonSecure">
             <a data-link-id="01-07" data-link-name="Shopping Bag"
                rel="nofollow">
