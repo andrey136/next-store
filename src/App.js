@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//Modules
+import Header from "./Components/Header/Header";
+import FrontContent from "./Components/Store Front Content/FrontContent";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.nav = ['sale', 'baby', 'girls', 'boys', 'nightwear', 'women', 'men', 'shoes', 'home'];
+
+    this.state = {
+      fade: false,
+      flag_active: false,
+      shopping_bag_number: 0
+    }
+  }
+
+  change_flag_active_status(){
+    if(this.state.fade){
+      this.setState({flag_active: !this.state.flag_active});
+      setTimeout(() => {this.setState({fade: !this.state.fade})}, 1000)
+    } else {
+      this.setState({fade: !this.state.fade});
+      setTimeout(() => {this.setState({flag_active: !this.state.flag_active})}, 10)
+    }
+  }
+
+  change_shopping_bag_number(){
+    let num = this.state.shopping_bag_number;
+    num < 10 ? ++num : num = 0;
+    this.setState({shopping_bag_number: num});
+  }
+
+  render() {
+
+    return (
+      <div className="App">
+
+        <Header nav={this.nav} state={this.state} change_flag_active_status={() => this.change_flag_active_status()} change_shopping_bag_number={() => this.change_shopping_bag_number()}/>
+
+        <FrontContent state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
+
+      </div>
+    );
+  }
 }
 
 export default App;
