@@ -52,6 +52,10 @@ header{
 
 /*Search Box*/
 
+.input-search-bar{
+  display: inline-block;
+}
+
 .HeaderTopBar .SearchBox{
   border: none;
   height: 25px;
@@ -62,7 +66,7 @@ header{
   border-bottom-left-radius: 2px;
 }
 
-.HeaderTopBarInput{
+.header-top-bar-container{
   display: inline-block;
   margin-left: 90px;
 }

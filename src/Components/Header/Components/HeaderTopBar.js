@@ -1,4 +1,5 @@
 import React from "react";
+import InputSearchBar from "./InputSearchBar";
 
 
 class HeaderTopBar extends React.Component {
@@ -10,11 +11,8 @@ class HeaderTopBar extends React.Component {
     return (
       <section className="HeaderTopBar">
         <a href="" className="HeaderLogo">next</a>
-        <div className="HeaderTopBarInput">
-          <input type="text" name="w" id="sli_search_1" className="SearchBox"
-                 placeholder="Search product or brand" required="required" spellCheck="false"
-                 autoComplete="off"/>
-          <input type="text" className='InputButton' readOnly='readonly'/>
+        <div className="header-top-bar-container">
+          <InputSearchBar/>
           <div className="QuickLinks">
             <ul>
               {this.quick_links.map((el,ind) => ind == this.quick_links.length ? <li><a href="">{el}</a></li> : <li id="top-header-phone-number"><a href="">{el}</a></li>)}
