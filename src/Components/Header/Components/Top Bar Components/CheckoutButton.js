@@ -6,7 +6,7 @@ class CheckoutButton extends React.Component {
     return (
       <div className="Checkout">
         <a className="nxbtn primary disabled" data-link-id="01-08" data-link-name="Checkout"
-           rel="nofollow">Checkout</a>
+           rel="nofollow">{this.props.json_data.txt}</a>
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React from "react";
 
 class QuickLinks extends React.Component {
 
-  quick_links = ['My Account', 'Quick', 'Shop', 'Help', '8 800 2009824'];
+  quick_links = this.props.json_data;
 
   render() {
 

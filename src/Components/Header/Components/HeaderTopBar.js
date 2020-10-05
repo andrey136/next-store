@@ -11,13 +11,13 @@ class HeaderTopBar extends React.Component {
 
     return (
       <section className="HeaderTopBar">
-        <a href="" className="HeaderLogo">next</a>
+        <a href="" className="HeaderLogo">{this.props.json_data.logo}</a>
         <div className="header-top-bar-container">
-          <InputSearchBar/>
-          <QuickLinks/>
-          <ShoppingBagIcon change_shopping_bag_number={() => this.props.change_shopping_bag_number()} state={this.props.state}/>
-          <CheckoutButton/>
-          <FlagIcon change_flag_active_status={() => this.props.change_flag_active_status()} state={this.props.state}/>
+          <InputSearchBar json_data={this.props.json_data.inputSearchBox}/>
+          <QuickLinks json_data={this.props.json_data.quickLinks}/>
+          <ShoppingBagIcon change_shopping_bag_number={() => this.props.change_shopping_bag_number()} state={this.props.state} json_data={this.props.json_data.shoppingBag}/>
+          <CheckoutButton json_data={this.props.json_data.checkoutButton}/>
+          <FlagIcon change_flag_active_status={() => this.props.change_flag_active_status()} state={this.props.state} json_data={this.props.json_data.flagIcon}/>
         </div>
       </section>
     );

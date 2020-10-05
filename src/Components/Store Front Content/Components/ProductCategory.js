@@ -8,9 +8,6 @@ import mens_joggers from "../../../pics/men-s-joggers-data.jpg";
 import adidas_kids from "../../../pics/adidas-kids-data.jpg";
 import children_nightwear from "../../../pics/children-s-nightwear-data.jpg";
 import bedding from "../../../pics/bedding-data.jpg";
-import kids from "../../../pics/kids-heritage-data.jpg";
-import womens from "../../../pics/womens-hoodies---sweatshirts-data.jpg";
-import mens from "../../../pics/mens-colour-blocking---stripes-data.jpg";
 
 
 class ProductCategory extends React.Component {
@@ -33,11 +30,11 @@ class ProductCategory extends React.Component {
         <div className="carousel_outer_product">
           {this.cats.map(el =>
             <div className="carousel_inner_product">
-            <a href="">
-              <img src={el.pic} alt=""/>
-              <div className="product-card-title">{el.entry}</div>
-            </a>
-          </div>
+              <a href="">
+                <img src={el.pic} alt=""/>
+                <div className="product-card-title">{el.entry}</div>
+              </a>
+            </div>
           )}
         </div>
       </div>
