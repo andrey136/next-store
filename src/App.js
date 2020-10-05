@@ -2,7 +2,8 @@ import React from 'react';
 //Modules
 import Header from "./Components/Header/Header";
 import FrontContent from "./Components/Store Front Content/FrontContent";
-import axios from "axios";
+import {get_json_data} from './API/axios.js'
+import {get_img} from "./API/axios";
 
 class App extends React.Component {
 
@@ -23,18 +24,12 @@ class App extends React.Component {
 
   componentDidMount() {
     console.log('componentDidMount\n', this.state);
+    get_json_data(this.state.loading).then((res) => res !== undefined && this.setState(res));
+    console.log(get_img())
+  }
 
-    axios.get('http://localhost:5000/next_store')
-      .then(res => {
-        this.setState({json_data: res.data, loading: false, server_responds: true});
-        console.log("componentDidMount True");
-
-    }).catch(err => {
-      if(this.state.loading){
-        this.setState({json_data: {}, loading: false, server_responds: false});
-        console.log('SERVER OFF\n', this.state);
-      }
-    })
+  change_state(obj){
+    this.setState(obj);
   }
 
   change_flag_active_status(){
@@ -55,13 +50,13 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('render \n', this.state)
+    // console.log('render \n', this.state)
     return (
       <div className="App">
       {!this.state.loading && this.state.server_responds ?
       <div>
         <Header json_data={this.state.json_data.pages.Components.Header} state={this.state} change_flag_active_status={() => this.change_flag_active_status()} change_shopping_bag_number={() => this.change_shopping_bag_number()}/>
-        <FrontContent state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
+        <FrontContent json_data={this.state.json_data.pages.Components.FrontContent} state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
       </div>
     : !this.state.loading && !this.state.server_responds ? <p>Server doesn't respond now. Try again later!</p> : <p></p>}
       </div>

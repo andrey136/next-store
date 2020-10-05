@@ -17,12 +17,12 @@ class FrontContent extends React.Component {
              onClick={() => this.props.change_flag_active_status()}></div>
         <div id="divStoreFrontPage" className="StoreFrontPage">
 
-          <TextBanner01/>
-          <Banner_Img/>
-          <ThreeTeaserStack id="1"/>
-          <ProductCategory/>
-          <ButtonList/>
-          <ThreeTeaserStack id="2"/>
+          <TextBanner01 json_data={this.props.json_data.TextBanner01}/>
+          <Banner_Img json_data={this.props.json_data.Banner_Img}/>
+          <ThreeTeaserStack id="1" json_data={this.props.json_data.ThreeTeaserStack.stack_01}/>
+          <ProductCategory json_data={this.props.json_data.ProductCategory}/>
+          <ButtonList json_data={this.props.json_data.ButtonList}/>
+          <ThreeTeaserStack id="2" json_data={this.props.json_data.ThreeTeaserStack.stack_02}/>
         </div>
       </div>);
   }

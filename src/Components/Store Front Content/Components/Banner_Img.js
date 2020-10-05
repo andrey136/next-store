@@ -1,16 +1,12 @@
 import React from "react";
-// Components
-// Pics
-import banner from "../../../pics/50-hp-banner-salenowon-ru-data.jpg";
 
 class Banner_Img extends React.Component {
 
   render() {
-
     return (
       <div className="imagemap_banner">
         <a href="">
-          <img src={banner} alt=""/>
+          <img src={`http://localhost:5000/next_store/get_image?img_name=50-hp-banner-salenowon-ru-data.jpg`} alt=""/>
         </a>
       </div>
     );
