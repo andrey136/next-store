@@ -1,0 +1,61 @@
+.PageFooter{
+    text-transform: uppercase;
+    font-family: azo-sans, sans-serif;
+    margin-top: 30px;
+}
+
+.PageFooter.homeFooter{
+    width: 100%;
+    color: #111;
+    display: block;
+    bottom: auto;
+    height: auto;
+    position: relative;
+    background: none;
+    box-shadow: none;
+    margin-top: 23px;
+}
+
+.FooterLinks{
+    width: 976px;
+    margin: 0 auto;
+}
+
+.Inner{
+    /*background: rgba(0, 241, 161, 0.64);*/
+}
+
+.LinkSection{
+    width: 33.3%;
+    /*background: rgba(220, 181, 57, 0.68);*/
+    height: 180px;
+    float: left;
+    min-height: 200px;
+}
+
+.LinkSection a{
+    font-size: 11px;
+    color: #000;
+}
+
+.LinkSection a:hover{
+    text-decoration: underline;
+}
+
+.Title{
+    font-size: 18px;
+    border-bottom: 1px dotted #c7c5c5;
+    margin: 0 10px;
+}
+
+.LinkList{
+    padding-top: 10px;
+    height: 150px;
+}
+
+.Item{
+    padding: 3px 10px;
+    margin: 0;
+    width: auto;
+    display: block;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 //Modules
 import Header from "./Components/Header/Header";
 import FrontContent from "./Components/Store Front Content/FrontContent";
+import Footer from "./Components/Footer/Footer";
 import {get_json_data} from './API/axios.js'
 import {get_img} from "./API/axios";
 
@@ -56,6 +57,7 @@ class App extends React.Component {
       <div>
         <Header json_data={this.state.json_data.pages.Components.Header} state={this.state} change_flag_active_status={() => this.change_flag_active_status()} change_shopping_bag_number={() => this.change_shopping_bag_number()}/>
         <FrontContent json_data={this.state.json_data.pages.Components.FrontContent} state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
+        <Footer/>
       </div>
     : !this.state.loading && !this.state.server_responds ? <p>Server doesn't respond now. Try again later!</p> : <p></p>}
       </div>
