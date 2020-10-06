@@ -28,7 +28,6 @@
 .LinkSection{
     width: 33.3%;
     /*background: rgba(220, 181, 57, 0.68);*/
-    height: 180px;
     float: left;
     min-height: 200px;
 }
@@ -50,7 +49,6 @@
 
 .LinkList{
     padding-top: 10px;
-    height: 150px;
 }
 
 .Item{
@@ -58,4 +56,45 @@
     margin: 0;
     width: auto;
     display: block;
+}
+
+/*Footer Bottom Bar*/
+
+.footerBottomBar{
+    margin: 30px auto 0;
+    font-size: 11px;
+    width: 976px;
+    padding: 10px;
+    background: #fafafa;
+    border-top: 1px dotted #c7c5c5;
+    border-bottom: 1px dotted #c7c5c5;
+}
+
+.InnerFooter{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.Copyright{
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.PageFooter .Copyright{
+    float: left;
+    height: 16px;
+    padding: 2px 18px 0 10px;
+    font-size: 10px;
+    line-height: 100%;
+}
+
+.footerBottomBar .LinkList{
+    float: right;
+    padding-top: 0
+}
+
+.footerBottomBar .LinkList .Item{
+    display: inline-block;
+    padding: 0 10px 0 0;
+    color: #222222;
 }
