@@ -50,7 +50,6 @@ class App extends React.Component {
   }
 
   render() {
-    // console.log('render \n', this.state)
     return (
       <div className="App">
       {!this.state.loading && this.state.server_responds ?
