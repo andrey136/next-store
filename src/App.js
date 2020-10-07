@@ -26,7 +26,6 @@ class App extends React.Component {
   componentDidMount() {
     console.log('componentDidMount\n', this.state);
     get_json_data(this.state.loading).then((res) => res !== undefined && this.setState(res));
-    console.log(get_img())
   }
 
   change_state(obj){
@@ -51,13 +50,14 @@ class App extends React.Component {
   }
 
   render() {
+    console.log('RENDER:\n', this.state);
     return (
       <div className="App">
       {!this.state.loading && this.state.server_responds ?
       <div>
         <Header json_data={this.state.json_data.pages.Components.Header} state={this.state} change_flag_active_status={() => this.change_flag_active_status()} change_shopping_bag_number={() => this.change_shopping_bag_number()}/>
         <FrontContent json_data={this.state.json_data.pages.Components.FrontContent} state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
-        <Footer/>
+        <Footer json_data={this.state.json_data.pages.Components.Footer}/>
       </div>
     : !this.state.loading && !this.state.server_responds ? <p>Server doesn't respond now. Try again later!</p> : <p></p>}
       </div>

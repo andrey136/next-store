@@ -3,20 +3,22 @@ import '../footer.css';
 
 class FooterLinksContent extends React.Component {
 
-  links = {
-    ul_1: {
-      title: 'Help',
-      links: ["My account", "Returns Information", "Shipping Information", "Contact Us", "Sitemap"]
-    },
-    ul_2: {
-      title: 'Privacy & Legal',
-      links: ["Privacy Policy", "Terms & Conditions"]
-    },
-    ul_3: {
-      title: 'Other Services',
-      links: ["Next Mobile", "Media & Press", "The Company", "Careers@next", "Next Franchise Next Affiliates", "Next Affiliates"]
-    },
-  };
+  // links = {
+  //   ul_1: {
+  //     title: 'Help',
+  //     links: ["My account", "Returns Information", "Shipping Information", "Contact Us", "Sitemap"]
+  //   },
+  //   ul_2: {
+  //     title: 'Privacy & Legal',
+  //     links: ["Privacy Policy", "Terms & Conditions"]
+  //   },
+  //   ul_3: {
+  //     title: 'Other Services',
+  //     links: ["Next Mobile", "Media & Press", "The Company", "Careers@next", "Next Franchise Next Affiliates", "Next Affiliates"]
+  //   },
+  // };
+
+  links = this.props.json_data;
 
   render() {
 
