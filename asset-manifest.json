@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/next-store/static/css/main.dc35b74c.chunk.css",
+    "main.js": "/next-store/static/js/main.4be33f2f.chunk.js",
+    "main.js.map": "/next-store/static/js/main.4be33f2f.chunk.js.map",
+    "runtime-main.js": "/next-store/static/js/runtime-main.7bf92f1d.js",
+    "runtime-main.js.map": "/next-store/static/js/runtime-main.7bf92f1d.js.map",
+    "static/js/2.1cc2da82.chunk.js": "/next-store/static/js/2.1cc2da82.chunk.js",
+    "static/js/2.1cc2da82.chunk.js.map": "/next-store/static/js/2.1cc2da82.chunk.js.map",
+    "index.html": "/next-store/index.html",
+    "precache-manifest.dccbcecb08a6a07779c9184eccdd2bc5.js": "/next-store/precache-manifest.dccbcecb08a6a07779c9184eccdd2bc5.js",
+    "service-worker.js": "/next-store/service-worker.js",
+    "static/css/main.dc35b74c.chunk.css.map": "/next-store/static/css/main.dc35b74c.chunk.css.map",
+    "static/js/2.1cc2da82.chunk.js.LICENSE.txt": "/next-store/static/js/2.1cc2da82.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/next-store/static/media/small-flags-sprite.35a4ea8d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7bf92f1d.js",
+    "static/js/2.1cc2da82.chunk.js",
+    "static/css/main.dc35b74c.chunk.css",
+    "static/js/main.4be33f2f.chunk.js"
+  ]
+}
