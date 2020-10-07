@@ -6,7 +6,7 @@ class Banner_Img extends React.Component {
     return (
       <div className="imagemap_banner">
         <a href="">
-          <img src={`https://next-store-server.herokuapp.com/next_store/get_image?img_name=${this.props.json_data.img_name}`} alt=""/>
+          <img src={`${this.props.server_address}/next_store/get_image?img_name=${this.props.json_data.img_name}`} alt=""/>
         </a>
       </div>
     );

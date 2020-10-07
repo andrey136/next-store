@@ -11,7 +11,7 @@ class Footer extends React.Component {
     return (
       <footer class="PageFooter HomeFooter">
         <FooterLinksContent json_data={this.props.json_data.FooterLinksContent}/>
-        <FooterBottomBar json_data={this.props.json_data.FooterBottomBar}/>
+        <FooterBottomBar server_address={this.props.server_address} json_data={this.props.json_data.FooterBottomBar}/>
       </footer>);
   }
 }

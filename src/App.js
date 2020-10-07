@@ -4,7 +4,6 @@ import Header from "./Components/Header/Header";
 import FrontContent from "./Components/Store Front Content/FrontContent";
 import Footer from "./Components/Footer/Footer";
 import {get_json_data} from './API/axios.js'
-import {get_img} from "./API/axios";
 
 class App extends React.Component {
 
@@ -14,6 +13,7 @@ class App extends React.Component {
     this.nav = ['sale', 'baby', 'girls', 'boys', 'nightwear', 'women', 'men', 'shoes', 'home'];
 
     this.state = {
+      server_address: 'https://next-store-server.herokuapp.com',
       server_responds: false,
       loading: true,
       fade: false,
@@ -25,11 +25,7 @@ class App extends React.Component {
 
   componentDidMount() {
     console.log('componentDidMount\n', this.state);
-    get_json_data(this.state.loading).then((res) => res !== undefined && this.setState(res));
-  }
-
-  change_state(obj){
-    this.setState(obj);
+    get_json_data(this.state.loading, this.state.server_address).then((res) => res !== undefined && this.setState(res));
   }
 
   change_flag_active_status(){
@@ -56,8 +52,8 @@ class App extends React.Component {
       {!this.state.loading && this.state.server_responds ?
       <div>
         <Header json_data={this.state.json_data.pages.Components.Header} state={this.state} change_flag_active_status={() => this.change_flag_active_status()} change_shopping_bag_number={() => this.change_shopping_bag_number()}/>
-        <FrontContent json_data={this.state.json_data.pages.Components.FrontContent} state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
-        <Footer json_data={this.state.json_data.pages.Components.Footer}/>
+        <FrontContent server_address={this.state.server_address} json_data={this.state.json_data.pages.Components.FrontContent} state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
+        <Footer server_address={this.state.server_address} json_data={this.state.json_data.pages.Components.Footer}/>
       </div>
     : !this.state.loading && !this.state.server_responds ? <p>Server doesn't respond now. Try again later!</p> : <p></p>}
       </div>

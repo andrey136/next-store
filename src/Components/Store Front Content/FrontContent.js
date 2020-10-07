@@ -11,7 +11,7 @@ import ImageMap from "./Components/ImageMap";
 class FrontContent extends React.Component {
 
   render() {
-
+    console.log(this.props);
     return (
       <div className="Background">
         <div id="DarkScreen" className={this.props.state.flag_active ? 'active' : ''}
@@ -20,13 +20,13 @@ class FrontContent extends React.Component {
         <div id="divStoreFrontPage" className="StoreFrontPage">
 
           <TextBanner01 json_data={this.props.json_data.TextBanner01}/>
-          <Banner_Img json_data={this.props.json_data.Banner_Img}/>
-          <ThreeTeaserStack id="1" json_data={this.props.json_data.ThreeTeaserStack.stack_01}/>
-          <ProductCategory json_data={this.props.json_data.ProductCategory}/>
+          <Banner_Img server_address={this.props.server_address} json_data={this.props.json_data.Banner_Img}/>
+          <ThreeTeaserStack server_address={this.props.server_address} id="1" json_data={this.props.json_data.ThreeTeaserStack.stack_01}/>
+          <ProductCategory server_address={this.props.server_address} json_data={this.props.json_data.ProductCategory}/>
           <ButtonList json_data={this.props.json_data.ButtonList}/>
-          <ThreeTeaserStack id="2" json_data={this.props.json_data.ThreeTeaserStack.stack_02}/>
-          <MoreServices json_data={this.props.json_data.ProductCategory}/>
-          <ImageMap json_data={this.props.json_data.ProductCategory}/>
+          <ThreeTeaserStack server_address={this.props.server_address} id="2" json_data={this.props.json_data.ThreeTeaserStack.stack_02}/>
+          <MoreServices server_address={this.props.server_address} json_data={this.props.json_data.MoreServices}/>
+          <ImageMap server_address={this.props.server_address} json_data={this.props.json_data.ImageMap}/>
 
         </div>
       </div>);

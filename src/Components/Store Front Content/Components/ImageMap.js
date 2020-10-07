@@ -1,14 +1,12 @@
 import React from "react";
-import imagemap from '../../../pics/russia-mov-2tab-en-data.jpg'
 
 class ImageMap extends React.Component {
 
   render() {
-
     return (
       <div className="imagemap_banner row">
         <a href="">
-          <img src={imagemap} alt=""/>
+          <img src={`${this.props.server_address}/next_store/get_image?img_name=${this.props.json_data.img}`} alt=""/>
         </a>
       </div>
     );
