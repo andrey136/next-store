@@ -1,0 +1,59 @@
+.SecondaryNav{
+    position: relative;
+    color: black;
+    cursor: initial;
+}
+
+.DepartmentNav{
+    border: 1px solid #c7c5c5;
+    border-top: 0;
+    position: absolute;
+    height: 420px;
+    display: flex;
+    top: 10px;
+    left: -15px;
+    background: #fff;
+}
+
+.ComponentContainer{
+    padding-top: 10px;
+    padding-right: 4px;
+}
+
+.Component{
+    display: inline-block;
+    width: 192px;
+    height: 370px;
+    float: left;
+}
+
+.Component .ComponentItem{
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.Component .ComponentItem a{
+    color: black;
+}
+
+.Component .ComponentItem:hover{
+    text-decoration: underline;
+    /*cursor: pointer;*/
+}
+
+.ComponentItem.Header{
+    font-size: 13px;
+    margin: 20px 10px 10px 20px;
+    border-bottom: 1px dotted grey;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    text-decoration: none;
+}
+
+.ComponentItem.Header:hover{
+    text-decoration: none;
+    cursor: initial;
+}

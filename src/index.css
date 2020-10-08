@@ -239,13 +239,13 @@ header{
   margin: 0 auto;
 }
 
-#MainNavigation ul li{
+#MainNavigation .MegaNavDepartment{
   padding: 10px 15px;
   font-size: 1em;
   cursor: pointer;
 }
 
-#MainNavigation ul li:hover{
+#MainNavigation .MegaNavDepartment:hover{
   color: black;
   background: white;
 }
