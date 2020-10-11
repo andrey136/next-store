@@ -11,7 +11,9 @@ class ProductCategory extends React.Component {
           {this.props.json_data.categories.txt.map((el, i) =>
             <div className="carousel_inner_product">
               <a href="">
-                <img src={`${this.props.server_address}/next_store/get_image?img_name=${this.props.json_data.categories.img[i]}`} alt=""/>
+                <img
+                  src={`${this.props.server_address}/next_store/get_image?img_name=${this.props.json_data.categories.img[i]}`}
+                  alt=""/>
                 <div className="product-card-title">{this.props.json_data.categories.txt[i]}</div>
               </a>
             </div>

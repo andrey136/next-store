@@ -10,7 +10,6 @@ export const get_json_data = (loading, server_address) => {
       return {json_data: res.data, loading: false, server_responds: true}
     }).catch(err => {
     if(loading){
-      console.log('ERR');
       return {json_data: {}, loading: false, server_responds: false};
     }
   })

@@ -44,6 +44,10 @@
     /*cursor: pointer;*/
 }
 
+.ComponentItem.topEntry{
+    margin: 20px 10px 10px 20px;
+}
+
 .ComponentItem.Header{
     font-size: 13px;
     margin: 20px 10px 10px 20px;

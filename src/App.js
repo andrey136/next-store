@@ -24,12 +24,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount\n', this.state);
     get_json_data(this.state.loading, this.state.server_address).then((res) => res !== undefined && this.setState(res));
   }
 
   change_flag_active_status(){
-    console.log(this.state);
     if(this.state.fade){
       this.setState({flag_active: !this.state.flag_active});
       setTimeout(() => {this.setState({fade: !this.state.fade})}, 1000)
@@ -46,7 +44,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('RENDER:\n', this.state);
     return (
       <div className="App">
       {!this.state.loading && this.state.server_responds ?
