@@ -25,13 +25,14 @@
     width: 192px;
     height: 370px;
     float: left;
+    font-weight: 400;
 }
 
 .Component .ComponentItem{
     display: block;
     margin-left: 20px;
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .Component .ComponentItem a{
@@ -55,5 +56,18 @@
 
 .ComponentItem.Header:hover{
     text-decoration: none;
-    cursor: initial;
+    cursor: default;
+}
+
+#men .DepartmentNav{
+    left: -100px;
+}
+
+
+#shoes .DepartmentNav{
+    left: -161px;
+}
+
+#home .DepartmentNav{
+    left: -48px;
 }
