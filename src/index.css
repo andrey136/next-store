@@ -68,6 +68,7 @@ header{
 }
 
 .header-top-bar-container{
+  position: relative;
   display: inline-block;
   margin-left: 90px;
 }
@@ -141,6 +142,88 @@ header{
   color: white;
   text-decoration: none;
   cursor: pointer;
+}
+
+.addedToBagDialogue{
+  display: inline-block;
+  background: #fff;
+  width: 340px;
+  padding: 10px;
+  height: 180px;
+  position: absolute;
+  top: 58px;
+  left: 420px;
+  box-shadow: 0 2px 5px ;
+}
+
+.top_arrow{
+  position: absolute;
+  right: 53px;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.bagHeader{
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c7c5c5;
+  font-weight: 600;
+  font-size: 15px;
+  /*padding-top: 5px;*/
+}
+
+.innerAddedToBagDialogue{
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #c7c5c5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.total{
+  padding: 20px 0 10px;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.view_edit_bag{
+  float:left;
+  text-align: center;
+  padding: 10px 0;
+  min-width: 160px;
+  text-transform: uppercase;
+  border: 1px solid #c7c5c5;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #222
+}
+
+.checkout{
+  float:right;
+  text-align: center;
+  padding: 10px 0;
+  min-width: 160px;
+  text-transform: uppercase;
+  border: #c7c5c5;
+  border-radius: 4px;
+  background: #37d3cd;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .Icon{

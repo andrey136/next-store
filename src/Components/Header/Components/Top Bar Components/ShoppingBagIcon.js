@@ -9,7 +9,7 @@ class ShoppingBagIcon extends React.Component {
           <div className="BagSummary MiniBagNonSecure">
             <a data-link-id="01-07" data-link-name="Shopping Bag"
                rel="nofollow">
-              <div className="Icon" onClick={() => this.props.change_shopping_bag_number()}>
+              <div className="Icon" onClick={() => this.props.change_show_bag_dialogue()}>
                 <span>{this.props.state.shopping_bag_number}</span>
               </div>
               <div className="BagTextClipping  nextDisplayNone">
