@@ -152,7 +152,7 @@ header{
   height: 180px;
   position: absolute;
   top: 58px;
-  left: 420px;
+  left: 401px;
   box-shadow: 0 2px 5px ;
 }
 
@@ -348,7 +348,7 @@ header{
 #DarkScreen{
   transition: background-color 600ms;
   position: fixed;
-  top: 103px;
+  top:0;
   left: 0;
   height: 100%;
   width: 100%;
