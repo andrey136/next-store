@@ -104,7 +104,8 @@ header{
 
 .QuickLinks ul li a{
   text-decoration: none;
-  color: white;
+  /* color: white */
+  color: rgb(204, 203, 203);
 }
 
 #top-header-phone-number:last-child{
