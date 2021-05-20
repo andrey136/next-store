@@ -3,7 +3,12 @@ import React from 'react';
 import Header from "./Components/Header/Header";
 import FrontContent from "./Components/Store Front Content/FrontContent";
 import Footer from "./Components/Footer/Footer";
-import {get_json_data} from './API/axios.js'
+import {get_json_data} from './API/axios.js';
+import { startAction } from "./redux/actions/startAction";
+import { stopAction} from "./redux/actions/stopAction";
+import connect from "react-redux"
+
+import {logo} from './pics/_1.png';
 
 class App extends React.Component {
 
@@ -44,19 +49,46 @@ class App extends React.Component {
   }
 
   render() {
-    return (
+    // return (
+    //   <div className="App">
+    //   {!this.state.loading && this.state.server_responds ?
+    //   <div>
+    //     <Header json_data={this.state.json_data.pages.Components.Header} state={this.state} change_flag_active_status={() => this.change_flag_active_status()} change_shopping_bag_number={() => this.change_shopping_bag_number()}/>
+    //     <FrontContent server_address={this.state.server_address} json_data={this.state.json_data.pages.Components.FrontContent} state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
+    //     <Footer server_address={this.state.server_address} json_data={this.state.json_data.pages.Components.Footer}/>
+    //   </div>
+    // : !this.state.loading && !this.state.server_responds ? <p>Server doesn't respond now. Try again later!</p> : <p></p>}
+    //   </div>
+    //
+    // );
+    return(
       <div className="App">
-      {!this.state.loading && this.state.server_responds ?
-      <div>
-        <Header json_data={this.state.json_data.pages.Components.Header} state={this.state} change_flag_active_status={() => this.change_flag_active_status()} change_shopping_bag_number={() => this.change_shopping_bag_number()}/>
-        <FrontContent server_address={this.state.server_address} json_data={this.state.json_data.pages.Components.FrontContent} state={this.state} change_flag_active_status={() => this.change_flag_active_status()}/>
-        <Footer server_address={this.state.server_address} json_data={this.state.json_data.pages.Components.Footer}/>
+        <img
+          src={logo}
+          className={
+            "App-logo" +
+            (this.props.rotating ? "":" App-logo-paused")
+          }
+          alt="logo"
+          onClick={
+            this.props.rotating ?
+              this.props.stopAction : this.props.startAction
+          }
+        />
       </div>
-    : !this.state.loading && !this.state.server_responds ? <p>Server doesn't respond now. Try again later!</p> : <p></p>}
-      </div>
-
-    );
+    )
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  ...state
+});
+
+const mapDispatchToProps = dispatch => ({
+  startAction: () => dispatch(startAction),
+  stopAction: () => dispatch(stopAction)
+});
+
+export connect(mapStateToProps, mapDispatchToProps)(App);
+
+// export default App;
